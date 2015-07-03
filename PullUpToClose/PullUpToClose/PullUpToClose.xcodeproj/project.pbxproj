@@ -16,6 +16,7 @@
 		7153DD311B462EBD007B959D /* HomeTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7153DD301B462EBD007B959D /* HomeTableViewDataSource.swift */; };
 		7153DD331B46398B007B959D /* PullToCloseFootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7153DD321B46398B007B959D /* PullToCloseFootView.swift */; };
 		7153DD351B46734F007B959D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7153DD341B46734F007B959D /* SecondViewController.swift */; };
+		7153DD371B468351007B959D /* NavigationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7153DD361B468351007B959D /* NavigationAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		7153DD301B462EBD007B959D /* HomeTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewDataSource.swift; sourceTree = "<group>"; };
 		7153DD321B46398B007B959D /* PullToCloseFootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToCloseFootView.swift; sourceTree = "<group>"; };
 		7153DD341B46734F007B959D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7153DD361B468351007B959D /* NavigationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				7153DD301B462EBD007B959D /* HomeTableViewDataSource.swift */,
 				7153DD321B46398B007B959D /* PullToCloseFootView.swift */,
 				7153DD341B46734F007B959D /* SecondViewController.swift */,
+				7153DD361B468351007B959D /* NavigationAnimator.swift */,
 			);
 			path = PullUpToClose;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				7153DD311B462EBD007B959D /* HomeTableViewDataSource.swift in Sources */,
 				7153DD331B46398B007B959D /* PullToCloseFootView.swift in Sources */,
+				7153DD371B468351007B959D /* NavigationAnimator.swift in Sources */,
 				7153DD131B462C26007B959D /* HomeViewController.swift in Sources */,
 				7153DD351B46734F007B959D /* SecondViewController.swift in Sources */,
 				7153DD111B462C26007B959D /* AppDelegate.swift in Sources */,

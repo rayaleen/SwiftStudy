@@ -8,15 +8,17 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate {
 
     @IBOutlet weak var tableview: UITableView!
     var data : [String]?
+    var animator : NavigationAnimator = NavigationAnimator()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.data = ["Pull To Close"]
         self.tableview.dataSource = self
         self.tableview.delegate = self
+        self.navigationController?.delegate = self
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -32,6 +34,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableview.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
+        if operation == .Pop {
+            return self.animator
+        }
+        return nil
     }
 }
 
