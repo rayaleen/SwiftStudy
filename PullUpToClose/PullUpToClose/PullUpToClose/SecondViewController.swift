@@ -20,6 +20,7 @@ class SecondViewController: UIViewController, UITableViewDelegate {
         self.tableview.registerClass(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell");
         self.tableview.dataSource = self.datasource
         self.tableview.delegate = self
+        self.view.backgroundColor = UIColor.yellowColor()
         footer = PullToCloseFootView(frame: CGRectMake(0, 0, CGRectGetWidth(self.tableview.frame),50));
 //        footer?.reigsterScrollView(self.tableview)
         self.tableview.tableFooterView = footer

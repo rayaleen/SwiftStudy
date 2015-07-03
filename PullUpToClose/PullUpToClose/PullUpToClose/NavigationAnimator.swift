@@ -12,8 +12,8 @@ class NavigationAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
         let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        transitionContext.containerView().addSubview(toViewController!.view)
-        toViewController?.view.alpha = 0
+        transitionContext.containerView().insertSubview(toViewController!.view, belowSubview: fromViewController!.view)
+        toViewController?.view.alpha = 1
         var rect = fromViewController!.view.frame
         rect.origin.y = CGRectGetMidY(rect)
         rect.size.height = 10
@@ -26,6 +26,6 @@ class NavigationAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
-        return 1.0
+        return 1
     }
 }
