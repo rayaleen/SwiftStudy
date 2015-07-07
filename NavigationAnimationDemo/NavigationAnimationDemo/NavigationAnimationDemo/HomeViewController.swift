@@ -12,10 +12,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableview: UITableView!
     var data : [String]?
-    var animator : NavigationAnimator = NavigationAnimator()
+    var animator : UIViewControllerAnimatedTransitioning?
+    var selectedCell : UITableViewCell?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.data = ["Pull To Close"]
+        self.data = ["Close Animiation 1", "Close Animiation 2"]
         self.tableview.dataSource = self
         self.tableview.delegate = self
         self.navigationController?.delegate = self
@@ -24,6 +25,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCellWithIdentifier("tableviewcell", forIndexPath: indexPath) as! UITableViewCell
         cell.textLabel?.text = self.data?[indexPath.row]
+        cell.imageView?.image = UIImage(named: "onepiece")
         return cell
     }
     
@@ -34,13 +36,31 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableview.deselectRowAtIndexPath(indexPath, animated: true)
+        self.selectedCell = tableView.cellForRowAtIndexPath(indexPath)
+        if indexPath.row == 0 {
+            self.performSegueWithIdentifier("pushtoclosenavigation", sender: nil)
+        }else if indexPath.row == 1 {
+            self.performSegueWithIdentifier("pushtosnapimagenavigation", sender: nil)
+        }
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80
     }
     
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
-        if operation == .Pop {
-            return self.animator
+        self.animator = nil
+        if operation == .Pop && fromVC.isKindOfClass(SecondViewController.self) {
+            self.animator = NavigationAnimator()
         }
-        return nil
+        if operation == .Push && toVC.isKindOfClass(SnapImageViewController.self){
+            let snapAnimator = SnapImageAnimator()
+            snapAnimator.operationType = .Push
+            snapAnimator.selectedImageView = self.selectedCell?.imageView
+            self.animator = snapAnimator;
+        }
+        return self.animator
     }
+    
 }
 

@@ -8,16 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		711177B91B4A31A200E4870B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711177AC1B4A31A200E4870B /* AppDelegate.swift */; };
-		711177BA1B4A31A200E4870B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711177AE1B4A31A200E4870B /* LaunchScreen.xib */; };
-		711177BB1B4A31A200E4870B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711177B01B4A31A200E4870B /* Main.storyboard */; };
 		711177BC1B4A31A200E4870B /* HomeTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711177B21B4A31A200E4870B /* HomeTableViewDataSource.swift */; };
 		711177BD1B4A31A200E4870B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711177B31B4A31A200E4870B /* HomeViewController.swift */; };
-		711177BE1B4A31A200E4870B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 711177B41B4A31A200E4870B /* Images.xcassets */; };
-		711177BF1B4A31A200E4870B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 711177B51B4A31A200E4870B /* Info.plist */; };
 		711177C01B4A31A200E4870B /* NavigationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711177B61B4A31A200E4870B /* NavigationAnimator.swift */; };
 		711177C11B4A31A200E4870B /* PullToCloseFootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711177B71B4A31A200E4870B /* PullToCloseFootView.swift */; };
 		711177C21B4A31A200E4870B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711177B81B4A31A200E4870B /* SecondViewController.swift */; };
-		711177C61B4A31D700E4870B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 711177C51B4A31D700E4870B /* Info.plist */; };
+		711177C81B4A3C5400E4870B /* SnapImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711177C71B4A3C5400E4870B /* SnapImageViewController.swift */; };
+		711177C91B4A8FDD00E4870B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711177AE1B4A31A200E4870B /* LaunchScreen.xib */; };
+		711177CA1B4A8FDD00E4870B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711177B01B4A31A200E4870B /* Main.storyboard */; };
+		711177CB1B4A8FE700E4870B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 711177B41B4A31A200E4870B /* Images.xcassets */; };
+		711177CC1B4A8FE700E4870B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 711177B51B4A31A200E4870B /* Info.plist */; };
+		711177CD1B4A8FE700E4870B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 711177C51B4A31D700E4870B /* Info.plist */; };
+		713018441B4AA14200BD87F8 /* SnapImageAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713018431B4AA14200BD87F8 /* SnapImageAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		711177B71B4A31A200E4870B /* PullToCloseFootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullToCloseFootView.swift; path = NavigationAnimationDemo/PullToCloseFootView.swift; sourceTree = SOURCE_ROOT; };
 		711177B81B4A31A200E4870B /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = NavigationAnimationDemo/SecondViewController.swift; sourceTree = SOURCE_ROOT; };
 		711177C51B4A31D700E4870B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = NavigationAnimationDemoTests/Info.plist; sourceTree = SOURCE_ROOT; };
+		711177C71B4A3C5400E4870B /* SnapImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapImageViewController.swift; path = NavigationAnimationDemo/SnapImageViewController.swift; sourceTree = SOURCE_ROOT; };
+		713018431B4AA14200BD87F8 /* SnapImageAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapImageAnimator.swift; path = NavigationAnimationDemo/SnapImageAnimator.swift; sourceTree = SOURCE_ROOT; };
 		7153DD0B1B462C26007B959D /* NavigationAnimationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationAnimationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -85,6 +89,8 @@
 				711177B71B4A31A200E4870B /* PullToCloseFootView.swift */,
 				711177B81B4A31A200E4870B /* SecondViewController.swift */,
 				7153DD0E1B462C26007B959D /* Supporting Files */,
+				711177C71B4A3C5400E4870B /* SnapImageViewController.swift */,
+				713018431B4AA14200BD87F8 /* SnapImageAnimator.swift */,
 			);
 			name = NavigationAnimationDemo;
 			path = PullUpToClose;
@@ -172,11 +178,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				711177BA1B4A31A200E4870B /* LaunchScreen.xib in Resources */,
-				711177BB1B4A31A200E4870B /* Main.storyboard in Resources */,
-				711177BE1B4A31A200E4870B /* Images.xcassets in Resources */,
-				711177C61B4A31D700E4870B /* Info.plist in Resources */,
-				711177BF1B4A31A200E4870B /* Info.plist in Resources */,
+				711177CB1B4A8FE700E4870B /* Images.xcassets in Resources */,
+				711177CC1B4A8FE700E4870B /* Info.plist in Resources */,
+				711177CD1B4A8FE700E4870B /* Info.plist in Resources */,
+				711177C91B4A8FDD00E4870B /* LaunchScreen.xib in Resources */,
+				711177CA1B4A8FDD00E4870B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,10 +195,12 @@
 			files = (
 				711177C21B4A31A200E4870B /* SecondViewController.swift in Sources */,
 				711177C11B4A31A200E4870B /* PullToCloseFootView.swift in Sources */,
+				713018441B4AA14200BD87F8 /* SnapImageAnimator.swift in Sources */,
 				711177B91B4A31A200E4870B /* AppDelegate.swift in Sources */,
 				711177BD1B4A31A200E4870B /* HomeViewController.swift in Sources */,
 				711177C01B4A31A200E4870B /* NavigationAnimator.swift in Sources */,
 				711177BC1B4A31A200E4870B /* HomeTableViewDataSource.swift in Sources */,
+				711177C81B4A3C5400E4870B /* SnapImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

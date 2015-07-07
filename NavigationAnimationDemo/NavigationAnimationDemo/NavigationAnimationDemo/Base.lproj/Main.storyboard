@@ -20,12 +20,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkG-tg-wlw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1934" y="263"/>
+            <point key="canvasLocation" x="-1886" y="-429"/>
         </scene>
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="PullUpToClose" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="NavigationAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -44,9 +44,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4rm-Ht-Rfx" id="iRK-9I-ojC">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="7Th-12-hUR" kind="push" id="DRr-QB-FUl"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -62,16 +59,18 @@
                     <navigationItem key="navigationItem" title="Home" id="B0K-Fh-Rlo"/>
                     <connections>
                         <outlet property="tableview" destination="M7W-lu-fZR" id="BAR-WF-B1N"/>
+                        <segue destination="7Th-12-hUR" kind="push" identifier="pushtoclosenavigation" id="tQj-eU-5Y1"/>
+                        <segue destination="gD6-ju-W6s" kind="push" identifier="pushtosnapimagenavigation" id="hi0-EF-43d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1084" y="280"/>
+            <point key="canvasLocation" x="-1718" y="348"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="hvn-mu-uW7">
             <objects>
-                <viewController id="7Th-12-hUR" customClass="SecondViewController" customModule="PullUpToClose" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7Th-12-hUR" customClass="SecondViewController" customModule="NavigationAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Roi-RV-8vZ"/>
                         <viewControllerLayoutGuide type="bottom" id="YMa-2Q-kYb"/>
@@ -109,7 +108,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Dr-r1-GI5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-374" y="290"/>
+            <point key="canvasLocation" x="-999" y="-281"/>
+        </scene>
+        <!--Snap Image View Controller-->
+        <scene sceneID="epb-6t-GyQ">
+            <objects>
+                <viewController id="gD6-ju-W6s" customClass="SnapImageViewController" customModule="NavigationAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wKB-fD-uCc"/>
+                        <viewControllerLayoutGuide type="bottom" id="iL3-He-2sO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w5y-9K-ulP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onepiece" translatesAutoresizingMaskIntoConstraints="NO" id="KgT-g4-g3U">
+                                <rect key="frame" x="223" y="175" width="154" height="251"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="KgT-g4-g3U" secondAttribute="centerY" id="WYo-u6-6QV"/>
+                            <constraint firstAttribute="centerX" secondItem="KgT-g4-g3U" secondAttribute="centerX" id="dAw-Fn-rnd">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fz0-ic-aZ6"/>
+                    <connections>
+                        <outlet property="imageView" destination="KgT-g4-g3U" id="TLC-x2-Vbi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6lm-qX-H0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-999" y="437"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="onepiece" width="154" height="251"/>
+    </resources>
 </document>
